@@ -7,34 +7,131 @@
             Olivier Simard-Casanova's Twitter Archive
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            :root {
+                --bs-primary: #63212F;
+                --bs-primary-rgb: 99, 33, 47;
+                --bs-primary-hover: #521b26;
+                --bs-primary-active: #411621;
+            }
+
+            /* Regular primary button */
+            .btn-primary {
+                --bs-btn-bg: var(--bs-primary);
+                --bs-btn-border-color: var(--bs-primary);
+                --bs-btn-hover-bg: var(--bs-primary-hover);
+                --bs-btn-hover-border-color: var(--bs-primary-hover);
+                --bs-btn-active-bg: var(--bs-primary-active);
+                --bs-btn-active-border-color: var(--bs-primary-active);
+                --bs-btn-disabled-bg: var(--bs-primary);
+                --bs-btn-disabled-border-color: var(--bs-primary);
+                --bs-btn-disabled-opacity: 0.65;
+            }
+
+            /* Outline primary button */
+            .btn-outline-primary {
+                --bs-btn-color: var(--bs-primary);
+                --bs-btn-border-color: var(--bs-primary);
+                --bs-btn-hover-bg: var(--bs-primary);
+                --bs-btn-hover-border-color: var(--bs-primary);
+                --bs-btn-active-bg: var(--bs-primary);
+                --bs-btn-active-border-color: var(--bs-primary);
+                --bs-btn-disabled-color: var(--bs-primary);
+                --bs-btn-disabled-border-color: var(--bs-primary);
+            }
+
+            /* Alert primary */
+            .alert-primary {
+                --bs-alert-bg: rgba(var(--bs-primary-rgb), 0.1);
+                --bs-alert-border-color: rgba(var(--bs-primary-rgb), 0.2);
+                --bs-alert-color: var(--bs-primary);
+            }
+
+            /* Background utilities */
+            .bg-primary {
+                background-color: var(--bs-primary) !important;
+            }
+
+            .bg-primary-subtle {
+                background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+            }
+
+            /* Links */
+            a {
+                color: var(--bs-primary);
+            }
+
+            a:hover {
+                color: var(--bs-primary-hover);
+            }
+
+            .link-primary {
+                color: var(--bs-primary) !important;
+            }
+
+            .link-primary:hover {
+                color: var(--bs-primary-hover) !important;
+            }
+
+            /* Other components */
+            .text-primary {
+                color: var(--bs-primary) !important;
+            }
+
+            .nav-pills .nav-link.active {
+                background-color: var(--bs-primary);
+            }
+
+            .form-check-input:checked {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+
+            .page-item.active .page-link {
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+
+            .page-link {
+                color: var(--bs-primary);
+            }
+
+            .page-link:hover {
+                color: var(--bs-primary-hover);
+            }
+
+            .alert-primary .alert-link {
+                color: var(--bs-primary-hover);
+            }
+        </style>
     </head>
-    <body>
+    <body class="bg-primary-subtle">
         <main class="min-vh-100 d-flex align-items-center justify-content-center">
-            <div class="col-lg-10 mx-auto p-4 py-md-5">
-                <div class="row p-4 pb-0 pt-lg-5 align-items-center rounded-3 border shadow">
-                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Olivier Simard-Casanova's Twitter Archive</h1>
-                    <a class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm" href="https://bsky.app/profile/did:plc:esmiuxk53vmsllayghrq676w" target="_blank" role="button">Follow me on Bluesky @o.simardcasanova.net</a>
-                    <div class="col-lg-7 p-3 pt-lg-3">
-                        <p class="lead">
+            <div class="col-lg-10 mx-3 mx-lg-auto p-4 py-md-5 align-items-center bg-white rounded-3 border shadow">
+                <div class="row">
+                    <h1 class="display-4 fw-bold lh-1 fs-2 text-primary">Olivier Simard-Casanova's Twitter Archive</h1>
+                        <p class="lead fs-6">
                             🇺🇸 I used to have two Twitter account: <a href="/simardcasanova/">@simardcasanova</a> (mostly in English) and <a href="/EcoSceptique/">@EcoSceptique</a> (mostly in French). Here are their archive.
                         </p>
-                        <p class="lead">
+                        <p class="lead fs-6">
                             🇫🇷 J'avais deux comptes Twitter : <a href="/simardcasanova/">@simardcasanova</a> (principalement en anglais) et <a href="/EcoSceptique/">@EcoSceptique</a> (principalement en français). Voici leurs archives.
                         </p>
+                </div>
+                <div class="row g-2">
+                    <div class="col-12 col-md-6"> <!-- Full width on mobile, half on medium screens and up -->
+                        <a class="btn btn-primary w-100 px-4 fw-bold shadow-sm" href="/simardcasanova/" role="button">@simardcasanova</a>
                     </div>
-                    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
-                        <!--
-                        <h2>Choose an archive:</h2>
-                        -->
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                            <a class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm" href="/simardcasanova/" role="button">@simardcasanova</a>
-                        </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                            <a class="btn btn-primary btn-lg px-4 me-md-2 fw-bold shadow-sm" href="/EcoSceptique/" role="button">@EcoSceptique</a>
-                        </div>
+                    
+                    <div class="col-12 col-md-6">
+                        <a class="btn btn-primary w-100 px-4 fw-bold shadow-sm" href="/EcoSceptique/" role="button">@EcoSceptique</a>
                     </div>
                 </div>
-
+                
+                <div class="row g-2 mt-2">
+                    <div class="col-12">
+                        <a class="btn btn-outline-primary w-100 px-4 fw-bold shadow-sm" href="https://bsky.app/profile/did:plc:esmiuxk53vmsllayghrq676w" target="_blank" role="button">Follow me on Bluesky @o.simardcasanova.net</a>
+                    </div>
+                </div>
             </div>
         </main>
         
